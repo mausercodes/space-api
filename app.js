@@ -30,7 +30,8 @@ app.displayInfo = function(imageData){
 };
 
 app.events = function(){
-	$(".randomImg").on("click", function(){
+	$(".randomImg").on("click", function(e){
+		e.preventDefault();
 		var day = Math.random() * (31-1) + 1;
 		var month = Math.random() * (12-1) + 1;
 		var year = Math.random() * (2015-2000) + 2000;
